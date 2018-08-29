@@ -16,9 +16,14 @@ public class Film {
 
         if (regisseur.equals(""))
             this.regisseur = "Onbekend";
+        else
+            this.regisseur = regisseur;
+
 
         if (jaarUitgebracht.equals(""))
             this.jaarUitgebracht = "Onbekend";
+        else
+            this.jaarUitgebracht = jaarUitgebracht;
     }
 
 
