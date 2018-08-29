@@ -25,12 +25,7 @@ public class Film {
         else
             this.jaarUitgebracht = jaarUitgebracht;
     }
-
-
-    public Film(String filmTitel) {
-
-        this.filmTitel = filmTitel;
-    }
+    
 
     public String getFilmTitel() {
 
