@@ -5,11 +5,11 @@ package com.company;
 public class Film {
 
     private String filmTitel;
-    private int jaarUitgebracht;
+    private String jaarUitgebracht;
     private String regisseur;
 
 
-    public Film(String filmTitel, String regisseur, int jaarUitgebracht) {
+    public Film(String filmTitel, String regisseur, String jaarUitgebracht) {
 
         this.filmTitel = filmTitel;
         this.regisseur = regisseur;
@@ -26,12 +26,19 @@ public class Film {
     }
 
 
-    public int getJaarUitgebracht() {
+    public String getJaarUitgebracht() {
+
+        if (this.jaarUitgebracht.equals(""))
+            return "Onbekend";
 
         return this.jaarUitgebracht;
     }
 
     public String getRegisseur() {
+
+
+        if (this.regisseur.equals(""))
+            return "Onbekend";
 
         return this.regisseur;
     }

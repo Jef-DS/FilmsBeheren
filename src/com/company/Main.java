@@ -79,7 +79,7 @@ public class Main {
 
         String titelFilm = "";
         String regisseur = "";
-        int jaarUitgebracht;
+        String jaarUitgebracht = "";
 
 
         do {
@@ -95,15 +95,14 @@ public class Main {
 
                 regisseur = scanner.nextLine();
 
-                System.out.print("Weet u jaar dat de film is uitgebracht? ");
+                System.out.print("Weet u het jaar dat de film is uitgebracht? ");
 
-                jaarUitgebracht = Integer.parseInt(scanner.nextLine());
+                jaarUitgebracht = scanner.nextLine();
 
                 filmlijst.add(new Film(titelFilm, regisseur, jaarUitgebracht));
 
                 filmsSchrijvenNaarBestand();
             }
-
 
         } while (!titelFilm.equalsIgnoreCase(""));
 
@@ -117,7 +116,7 @@ public class Main {
         for (Film film : filmlijst) {
             System.out.printf("Titel: %s\n", film.getFilmTitel());
             System.out.printf("Regisseur:  %s\n", film.getRegisseur());
-            System.out.printf("Jaar uitgebracht: %d\n", film.getJaarUitgebracht());
+            System.out.printf("Jaar uitgebracht: %s\n", film.getJaarUitgebracht());
             System.out.println("");
         }
 
@@ -134,7 +133,7 @@ public class Main {
 
                 pw.printf("Titel: %s%n", film.getFilmTitel());
                 pw.printf("Regisseur: %s%n", film.getRegisseur());
-                pw.printf("Jaar uitgebracht: %d%n", film.getJaarUitgebracht());
+                pw.printf("Jaar uitgebracht: %s%n", film.getJaarUitgebracht());
                 pw.println();
             }
 
