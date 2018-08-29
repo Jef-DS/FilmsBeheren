@@ -1,0 +1,42 @@
+
+
+Analyse en bespreking van het te programmeren programma "FilmsBeheren".
+-----------------------------------------------------------------------
+
+
+
+
+Minimumvereisten:
+
+- Films toevoegen aan een lijst
+- Een lijst van films opvragen
+
+
+
+
+Toegevoegde vereisten:
+
+
+- Foutmelding bij foute input
+- Het programma stopt als er niets(<return> drukken) wordt ingegeven.
+- De verschillende functies in de Main klasse in afzonderlijke functies gieten.
+- Een afzonderlijke film-klasse met variabelen als filmtitel, regisseur, het jaartal dat de film is
+uitgebracht.
+
+
+- De ingegeven films opslagen in een tekstbestand.
+- De ingegeven films opslagen in een HTML-bestand.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
