@@ -125,7 +125,7 @@ public class Main {
     private static void filmsSchrijvenNaarBestand() {
 
 
-        try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("films.txt"))))
+        try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("films.txt", true))))
 
         {
 

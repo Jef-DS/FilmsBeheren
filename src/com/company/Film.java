@@ -25,7 +25,7 @@ public class Film {
         else
             this.jaarUitgebracht = jaarUitgebracht;
     }
-    
+
 
     public String getFilmTitel() {
 
