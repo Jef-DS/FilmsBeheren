@@ -1,8 +1,9 @@
 package com.company;
 
 
+import java.util.Comparator;
 
-public class Film {
+public class Film  {
 
     private String filmTitel;
     private String jaarUitgebracht;
@@ -43,4 +44,19 @@ public class Film {
 
         return this.regisseur;
     }
+
+    public void setFilmTitel(String filmTitel) {
+        this.filmTitel = filmTitel;
+    }
+
+    public void setRegisseur(String regisseur) {
+
+        this.regisseur = regisseur;
+    }
+
+    public void setJaarUitgebracht(String jaarUitgebracht) {
+
+        this.jaarUitgebracht = jaarUitgebracht;
+    }
 }
+

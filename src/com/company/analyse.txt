@@ -25,7 +25,43 @@ uitgebracht.
 
 
 - De ingegeven films opslagen in een tekstbestand.
+    -   Als de gebruiker een lijst van films opvraagt, zonder eerst films in te geven, wordt er gezien of er al films in het tekstbestand
+        zijn opgeslagen.
+        Als er nog geen films in een tekstbestand zijn opgeslagen verschijnt er een melding met "Nog geen films opgeslagen op de harde schijf."
+
+
+
 - De ingegeven films opslagen in een HTML-bestand.
+
+
+
+
+
+
+
+Schatting tijdsduur van het programmeren van de verschillende onderdelen.
+-------------------------------------------------------------------------
+
+
+
+- Het programma met de basisvereisten.
+    Schatting: Anderhalf uur
+    Reële tijdsduur: 2 uur en 30 min
+
+
+- Om de films naar een tekstbestand weg te schrijven.
+    Schatting: 30min
+    Reële tijdsduur: 25min
+
+- Code toevoegen om een film te verwijderen of te wijzigen.
+    Schatting: 1 uur
+    Reële tijdsduur: 1 uur
+
+
+
+
+
+
 
 
 

@@ -1,8 +1,15 @@
-Titel: Rambo
-Regisseur: Sylvester
-Jaar uitgebracht: 1980
-
-Titel: ET
-Regisseur: Steven Spielberg
-Jaar uitgebracht: 1985
-
+ET
+Steven Spielberg
+1990
+Jurassic Park
+Steven Spielberg
+1995
+Robocop
+Paul Verhoeven
+1990
+Rambo II
+Sylvester Stallone
+1985
+Saw
+James Wan
+2004
