@@ -1,0 +1,25 @@
+filmWijzigen()
+
+boolean ongeldigeInput = true;
+
+                    do {
+                        System.out.print("\nWilt u nog iets wijzigen ?\tJa of <ENTER> om te stoppen: ");
+
+                        String JaOfNee = scanner.nextLine();
+
+                        if (JaOfNee.equalsIgnoreCase("ja")) {
+                            IetsWijzigen = true;
+                            ongeldigeInput = false;
+
+                        } else {
+
+                            if (!JaOfNee.equalsIgnoreCase("")) {
+                                System.out.println(foutmelding);
+                                IetsWijzigen = true;
+
+                            } else {
+                                IetsWijzigen = false;
+                                ongeldigeInput = false;
+                            }
+                        }
+                    } while (ongeldigeInput);

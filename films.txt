@@ -4,12 +4,9 @@ Steven Spielberg
 Jurassic Park
 Steven Spielberg
 1995
-Robocop
-Paul Verhoeven
-1990
-Rambo II
-Sylvester Stallone
-1985
 Saw
 James Wan
 2004
+Rambo
+Sylvester Stallone
+1985

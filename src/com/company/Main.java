@@ -56,7 +56,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        String input;
+        String keuze;
 
         do {
 
@@ -66,30 +66,27 @@ public class Main {
             System.out.println("1. Geef films in");
             System.out.println("2. Een lijst van films opvragen");
 
-            //        System.out.println("3. Een film zoeken\n");                 // Misschien nog uitwerken ?
 
             System.out.println("\n<ENTER> om te stoppen\n");
 
             System.out.print("Keuze: ");
 
-            input = scanner.nextLine();
+            keuze = scanner.nextLine();
 
-            if (!input.equalsIgnoreCase("")) {
-
-                int keuze = Integer.parseInt(input);
+            if (!keuze.equalsIgnoreCase("")) {
 
 
-                if (keuze == 1)
+                if (keuze.equals("1"))
                     filmsIngeven();
 
-                else if (keuze == 2)
+                else if (keuze.equals("2"))
                     filmsTonen();
 
                 else
                     System.out.println(foutmelding);
 
             }
-        } while (!input.equalsIgnoreCase(""));
+        } while (!keuze.equalsIgnoreCase(""));
 
 
         System.out.println("\n\tEINDE PROGRAMMA");
@@ -239,10 +236,12 @@ public class Main {
 
             if (film.getFilmTitel().equalsIgnoreCase(titelTeZoeken)) {
 
-                boolean nogIetsWijzigen;
+                gevonden = true;
+
+                boolean IetsWijzigen = true;
 
                 do {
-                    System.out.println("\nWat wilt u wijzigen ?\tTitel: 1 \tRegisseur: 2\tJaar: 3 ");
+                    System.out.println("\nWat wilt u wijzigen ?\tTitel: 1 \tRegisseur: 2\tJaar: 3\t<ENTER> om te stoppen");
                     System.out.print("\nKeuze: ");
 
                     int keuze = Integer.parseInt(scanner.nextLine());
@@ -253,6 +252,8 @@ public class Main {
                             String nieuweTitel = scanner.nextLine();
 
                             film.setFilmTitel(nieuweTitel);
+
+                            System.out.printf("\nTitel gewijzigd naar \"%s\"\n", film.getFilmTitel());
                             break;
 
                         case 2:
@@ -260,6 +261,8 @@ public class Main {
                             String nieuweRegisseur = scanner.nextLine();
 
                             film.setRegisseur(nieuweRegisseur);
+
+                            System.out.printf("\nRegisseur gewijzigd naar \"%s\"\n", film.getRegisseur());
                             break;
 
                         case 3:
@@ -267,28 +270,17 @@ public class Main {
                             String nieuwJaar = scanner.nextLine();
 
                             film.setJaarUitgebracht(nieuwJaar);
+
+                            System.out.printf("\nJaar gewijzigd naar \"%s\"\n", film.getJaarUitgebracht());
                             break;
 
                         default:
                             System.out.println(foutmelding);
+                            IetsWijzigen = true;
                             break;
                     }
 
-                    gevonden = true;
-
-                    System.out.printf("\nFilm \"%s\" gewijzigd.\n", film.getFilmTitel());
-
-                    System.out.print("\nWilt u nog iets wijzigen ?\tJa of <ENTER> om te stoppen: ");
-
-                    String JaOfNee = scanner.nextLine();
-
-                    if (JaOfNee.equalsIgnoreCase("ja"))
-                        nogIetsWijzigen = true;
-                    else
-                        nogIetsWijzigen = false;
-
-
-                } while (nogIetsWijzigen);
+                } while (IetsWijzigen);
             }
         }
 
