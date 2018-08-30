@@ -58,7 +58,7 @@ public class Main {
 
         String keuze;
 
-        do {
+        do {       // Geen fout in deze do-while
 
             System.out.println("\nMENU");
             System.out.println("______________________________________");
@@ -105,7 +105,8 @@ public class Main {
         String jaarUitgebracht = "";
 
 
-        do {
+        do {       // Geen fout in deze do-while
+
             System.out.print("\nGeef films in:\n\n");
             System.out.print("Geef titel: <ENTER> om te stoppen: ");
 
@@ -156,7 +157,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        do {
+        do {        // Geen fout in deze do-while
 
             System.out.println("\nWilt u een film wijzigen of verwijderen ?\n");
             System.out.println("1 Wijzigen\t 2 Verwijderen\t <ENTER> om te stoppen");
@@ -181,7 +182,7 @@ public class Main {
     }
 
 
-    private static void filmVerwijderen() {
+    private static void filmVerwijderen() {  // In deze methode zitten nog onvolmaaktheden.
 
         Scanner scanner = new Scanner(System.in);
 
@@ -216,7 +217,7 @@ public class Main {
     }
 
 
-    private static void filmWijzigen() {
+    private static void filmWijzigen() {    // In deze methode zitten nog onvolmaaktheden.
 
         Scanner scanner = new Scanner(System.in);
 
@@ -238,49 +239,56 @@ public class Main {
 
                 gevonden = true;
 
-                boolean IetsWijzigen = true;
+                boolean ietsWijzigen = true;
 
-                do {
-                    System.out.println("\nWat wilt u wijzigen ?\tTitel: 1 \tRegisseur: 2\tJaar: 3\t<ENTER> om te stoppen");
+                do {    // Geen fout in deze do-while
+
+                    System.out.println("\nWat wilt u wijzigen ?\t 1 Titel\t 2 Regisseur\t 3 Jaar\t <ENTER> om te stoppen");
                     System.out.print("\nKeuze: ");
 
-                    int keuze = Integer.parseInt(scanner.nextLine());
+                    String keuze = scanner.nextLine();
 
-                    switch (keuze) {
-                        case 1:
-                            System.out.print("\nGeef de nieuwe titel: ");
-                            String nieuweTitel = scanner.nextLine();
+                    if (!keuze.equals("")) {
 
-                            film.setFilmTitel(nieuweTitel);
 
-                            System.out.printf("\nTitel gewijzigd naar \"%s\"\n", film.getFilmTitel());
-                            break;
+                        switch (keuze) {
+                            case "1":
+                                System.out.print("\nGeef de nieuwe titel: ");
+                                String nieuweTitel = scanner.nextLine();
 
-                        case 2:
-                            System.out.print("\nGeef de nieuwe regisseur: ");
-                            String nieuweRegisseur = scanner.nextLine();
+                                film.setFilmTitel(nieuweTitel);
 
-                            film.setRegisseur(nieuweRegisseur);
+                                System.out.printf("\nTitel gewijzigd naar \"%s\"\n", film.getFilmTitel());
+                                break;
 
-                            System.out.printf("\nRegisseur gewijzigd naar \"%s\"\n", film.getRegisseur());
-                            break;
+                            case "2":
+                                System.out.print("\nGeef de nieuwe regisseur: ");
+                                String nieuweRegisseur = scanner.nextLine();
 
-                        case 3:
-                            System.out.print("\nGeef het nieuwe jaar: ");
-                            String nieuwJaar = scanner.nextLine();
+                                film.setRegisseur(nieuweRegisseur);
 
-                            film.setJaarUitgebracht(nieuwJaar);
+                                System.out.printf("\nRegisseur gewijzigd naar \"%s\"\n", film.getRegisseur());
+                                break;
 
-                            System.out.printf("\nJaar gewijzigd naar \"%s\"\n", film.getJaarUitgebracht());
-                            break;
+                            case "3":
+                                System.out.print("\nGeef het nieuwe jaar: ");
+                                String nieuwJaar = scanner.nextLine();
 
-                        default:
-                            System.out.println(foutmelding);
-                            IetsWijzigen = true;
-                            break;
-                    }
+                                film.setJaarUitgebracht(nieuwJaar);
 
-                } while (IetsWijzigen);
+                                System.out.printf("\nJaar gewijzigd naar \"%s\"\n", film.getJaarUitgebracht());
+                                break;
+
+                            default:
+                                System.out.println(foutmelding);
+
+                                break;
+                        }
+
+                    } else
+                        ietsWijzigen = false;
+
+                } while (ietsWijzigen);
             }
         }
 

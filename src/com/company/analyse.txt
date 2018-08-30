@@ -18,21 +18,15 @@ Toegevoegde vereisten:
 
 
 - Foutmelding bij foute input
+
 - Het programma stopt als er niets(<return> drukken) wordt ingegeven.
-- De verschillende functies in de Main klasse in afzonderlijke functies gieten.
+
+- De verschillende functionaliteiten in de Main klasse in afzonderlijke methodes gieten.
+
 - Een afzonderlijke film-klasse met variabelen als filmtitel, regisseur, het jaartal dat de film is
 uitgebracht.
 
-
 - De ingegeven films opslagen in een tekstbestand.
-    -   Als de gebruiker een lijst van films opvraagt, zonder eerst films in te geven, wordt er gezien of er al films in het tekstbestand
-        zijn opgeslagen.
-        Als er nog geen films in een tekstbestand zijn opgeslagen verschijnt er een melding met "Nog geen films opgeslagen op de harde schijf."
-
-
-
-- De ingegeven films opslagen in een HTML-bestand.
-
 
 
 
@@ -55,7 +49,11 @@ Schatting tijdsduur van het programmeren van de verschillende onderdelen.
 
 - Code toevoegen om een film te verwijderen of te wijzigen.
     Schatting: 1 uur
-    Reële tijdsduur: 1 uur
+    Reële tijdsduur: 2 uur
+
+- Verschillende do-while's i.v.m. foutieve input, in de filmWijzigen-methode:
+    Schatting: 30 min
+    Reële tijdsduur: 3 uur
 
 
 
