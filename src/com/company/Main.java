@@ -68,7 +68,7 @@ public class Main {
 
             //        System.out.println("3. Een film zoeken\n");                 // Misschien nog uitwerken ?
 
-            System.out.println("\n<return> om te stoppen\n");
+            System.out.println("\n<ENTER> om te stoppen\n");
 
             System.out.print("Keuze: ");
 
@@ -110,7 +110,7 @@ public class Main {
 
         do {
             System.out.print("\nGeef films in:\n\n");
-            System.out.print("Geef titel: <return> om te stoppen: ");
+            System.out.print("Geef titel: <ENTER> om te stoppen: ");
 
             titelFilm = scanner.nextLine();
 
@@ -162,7 +162,7 @@ public class Main {
         do {
 
             System.out.println("\nWilt u een film wijzigen of verwijderen ?\n");
-            System.out.println("1 Wijzigen\t 2 Verwijderen\t <return> om te stoppen");
+            System.out.println("1 Wijzigen\t 2 Verwijderen\t <ENTER> om te stoppen");
             System.out.print("\nKeuze: ");
 
             keuze = scanner.nextLine();
@@ -239,39 +239,56 @@ public class Main {
 
             if (film.getFilmTitel().equalsIgnoreCase(titelTeZoeken)) {
 
-                System.out.println("\nWat wilt u wijzigen ?\tTitel: 1 \tRegisseur: 2\tJaar: 3 ");
-                System.out.print("\nKeuze: ");
+                boolean nogIetsWijzigen;
 
-                int keuze = Integer.parseInt(scanner.nextLine());
+                do {
+                    System.out.println("\nWat wilt u wijzigen ?\tTitel: 1 \tRegisseur: 2\tJaar: 3 ");
+                    System.out.print("\nKeuze: ");
 
-                switch (keuze) {
-                    case 1:
-                        System.out.print("\nGeef de nieuwe titel: ");
-                        String nieuweTitel = scanner.nextLine();
+                    int keuze = Integer.parseInt(scanner.nextLine());
 
-                        film.setFilmTitel(nieuweTitel);
-                        break;
-                    case 2:
-                        System.out.print("\nGeef de nieuwe regisseur: ");
-                        String nieuweRegisseur = scanner.nextLine();
+                    switch (keuze) {
+                        case 1:
+                            System.out.print("\nGeef de nieuwe titel: ");
+                            String nieuweTitel = scanner.nextLine();
 
-                        film.setRegisseur(nieuweRegisseur);
-                        break;
+                            film.setFilmTitel(nieuweTitel);
+                            break;
 
-                    case 3:
-                        System.out.print("\nGeef het nieuwe jaar: ");
-                        String nieuwJaar = scanner.nextLine();
+                        case 2:
+                            System.out.print("\nGeef de nieuwe regisseur: ");
+                            String nieuweRegisseur = scanner.nextLine();
 
-                        film.setJaarUitgebracht(nieuwJaar);
-                        break;
+                            film.setRegisseur(nieuweRegisseur);
+                            break;
 
-                    default:
-                        System.out.println(foutmelding);
-                        break;
-                }
+                        case 3:
+                            System.out.print("\nGeef het nieuwe jaar: ");
+                            String nieuwJaar = scanner.nextLine();
 
-                gevonden = true;
-                System.out.printf("\nFilm \"%s\" gewijzigd.\n", film.getFilmTitel());
+                            film.setJaarUitgebracht(nieuwJaar);
+                            break;
+
+                        default:
+                            System.out.println(foutmelding);
+                            break;
+                    }
+
+                    gevonden = true;
+
+                    System.out.printf("\nFilm \"%s\" gewijzigd.\n", film.getFilmTitel());
+
+                    System.out.print("\nWilt u nog iets wijzigen ?\tJa of <ENTER> om te stoppen: ");
+
+                    String JaOfNee = scanner.nextLine();
+
+                    if (JaOfNee.equalsIgnoreCase("ja"))
+                        nogIetsWijzigen = true;
+                    else
+                        nogIetsWijzigen = false;
+
+
+                } while (nogIetsWijzigen);
             }
         }
 
