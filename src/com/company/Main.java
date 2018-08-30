@@ -24,7 +24,7 @@ public class Main {
 
         menuTonen();
 
-
+        filmsSchrijvenNaarBestand();
     }
 
 
@@ -101,17 +101,32 @@ public class Main {
 
                 filmlijst.add(new Film(titelFilm, regisseur, jaarUitgebracht));
 
-                filmsSchrijvenNaarBestand();
+
             }
 
         } while (!titelFilm.equalsIgnoreCase(""));
-
 
     }
 
 
     private static void filmsTonen() {
+
         System.out.println("\nLijst van alle ingegeven films:\n");
+
+
+        try (Scanner reader = new Scanner(new BufferedReader(new FileReader("films.txt")))) {
+
+            while (reader.hasNextLine()) {
+
+                String line = reader.nextLine();
+                System.out.println(line);
+            }
+
+        } catch (IOException e) {
+
+            System.out.println("IOException: " + e.getMessage());
+        }
+
 
         for (Film film : filmlijst) {
             System.out.printf("Titel: %s\n", film.getFilmTitel());
